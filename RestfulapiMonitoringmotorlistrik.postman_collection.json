@@ -1,0 +1,961 @@
+{
+	"info": {
+		"_postman_id": "0146fb94-88d8-4cc4-adfe-78c0f9b67132",
+		"name": "RestfulapiMonitoringmotorlistrik",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autentikasi",
+			"item": [
+				{
+					"name": "Daftar User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nip",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "nama",
+									"value": "tes daftar",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "tes alamt",
+									"type": "text"
+								},
+								{
+									"key": "nohp",
+									"value": "0899",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tes@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": "/home/aldiariq/Pictures/Screenshot_2020-09-28_22-46-38.png"
+								},
+								{
+									"key": "status",
+									"value": "USER",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/daftaruser",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"daftaruser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Masuk User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "tes@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/masukuser",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"masukuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lihat Info User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/lihatdatauser/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"lihatdatauser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ganti Password User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "passwordlama",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "passwordbaru",
+									"value": "few2332fgwegg43g",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/gantipassworduser",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"gantipassworduser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "tes@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/resetpassworduser",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"resetpassworduser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kelola Pemakai",
+			"item": [
+				{
+					"name": "Tambah Pemakai",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "kode_pemakai",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "keterangan_pemakai",
+									"value": "tes keterangan pemakai",
+									"type": "text"
+								},
+								{
+									"key": "id_user",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/tambahpemakai",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"tambahpemakai"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lihat Pemakai",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/lihatpemakai/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"lihatpemakai",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lihat Satu Pemakai",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/lihatsatupemakai/1/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"lihatsatupemakai",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ubah Pemakai",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "kode_pemakai",
+									"value": "123 ed",
+									"type": "text"
+								},
+								{
+									"key": "keterangan_pemakai",
+									"value": "tes keterangan ed",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/ubahpemakai/1/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"ubahpemakai",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hapus Pemakai",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/hapuspemakai/1/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"hapuspemakai",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kelola Alat WO",
+			"item": [
+				{
+					"name": "Tambah Alat WO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMjM5OTUzfQ.RXzUiK0frEU9_s267OSGQp5NKwsFTdQ6v19uqbRBnkE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "kode_alat_wo",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "nama_alat_wo",
+									"value": "tes nama",
+									"type": "text"
+								},
+								{
+									"key": "keterangan_alat_wo",
+									"value": "tes keterangan",
+									"type": "text"
+								},
+								{
+									"key": "tgl_beli_alat_wo",
+									"value": "2021-02-02",
+									"type": "text"
+								},
+								{
+									"key": "usia_maksimum_alat_wo",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "usia_service_rekomendasi",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "id_user",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/tambahalatwo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"tambahalatwo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ubah Alat WO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMjM5OTUzfQ.RXzUiK0frEU9_s267OSGQp5NKwsFTdQ6v19uqbRBnkE"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "kode_alat_wo",
+									"value": "123 ed",
+									"type": "text"
+								},
+								{
+									"key": "nama_alat_wo",
+									"value": "tes nama ed ",
+									"type": "text"
+								},
+								{
+									"key": "keterangan_alat_wo",
+									"value": "tes keterangan e",
+									"type": "text"
+								},
+								{
+									"key": "tgl_beli_alat_wo",
+									"value": "2021-02-02",
+									"type": "text"
+								},
+								{
+									"key": "usia_maksimum_alat_wo",
+									"value": "55",
+									"type": "text"
+								},
+								{
+									"key": "usia_service_rekomendasi",
+									"value": "55",
+									"type": "text"
+								},
+								{
+									"key": "id_user",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/ubahalatwo/1/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"ubahalatwo",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lihat Alat WO",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/lihatalatwo/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"lihatalatwo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lihat Satu Alat WO",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/lihatsatualatwo/1/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"lihatsatualatwo",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hapus Alat WO",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/hapusalatwo/1/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"hapusalatwo",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kelola Kerusakan Mesin",
+			"item": [
+				{
+					"name": "Tambah Kerusakan Motor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMjM5OTUzfQ.RXzUiK0frEU9_s267OSGQp5NKwsFTdQ6v19uqbRBnkE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tgl_masuk",
+									"value": "2020-02-02",
+									"type": "text"
+								},
+								{
+									"key": "tgl_selesai",
+									"value": "2020-02-02",
+									"type": "text"
+								},
+								{
+									"key": "tgl_keluar",
+									"value": "2020-02-02",
+									"type": "text"
+								},
+								{
+									"key": "kode_alat_wo",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "kode_pemakai",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "material_bearing",
+									"value": "besi",
+									"type": "text"
+								},
+								{
+									"key": "material_kawat_kg",
+									"value": "besi",
+									"type": "text"
+								},
+								{
+									"key": "nomor_wo",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "keterangan",
+									"value": "tes keterangan",
+									"type": "text"
+								},
+								{
+									"key": "dll",
+									"value": "tes dll",
+									"type": "text"
+								},
+								{
+									"key": "id_user",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/tambahkerusakanmotor",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"tambahkerusakanmotor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ubah Kerusakan Motor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMjM5OTUzfQ.RXzUiK0frEU9_s267OSGQp5NKwsFTdQ6v19uqbRBnkE"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tgl_masuk",
+									"value": "2020-02-03",
+									"type": "text"
+								},
+								{
+									"key": "tgl_selesai",
+									"value": "2020-02-03",
+									"type": "text"
+								},
+								{
+									"key": "tgl_keluar",
+									"value": "2020-02-03",
+									"type": "text"
+								},
+								{
+									"key": "kode_alat_wo",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "kode_pemakai",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "material_bearing",
+									"value": "besi ed",
+									"type": "text"
+								},
+								{
+									"key": "material_kawat_kg",
+									"value": "besi ed",
+									"type": "text"
+								},
+								{
+									"key": "nomor_wo",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "keterangan",
+									"value": "tes keterangan ed",
+									"type": "text"
+								},
+								{
+									"key": "dll",
+									"value": "tes dll ed",
+									"type": "text"
+								},
+								{
+									"key": "id_user",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/ubahkerusakanmotor/1/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"ubahkerusakanmotor",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lihat Kerusakan Motor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/lihatkerusakanmotor/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"lihatkerusakanmotor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lihat Satu Kerusakan Motor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/lihatsatukerusakanmotor/1/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"lihatsatukerusakanmotor",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hapus Kerusakan Motor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJlbWFpbCI6InRlc0BnbWFpbC5jb20iLCJ0aW1lIjoxNjEyMTUyNzI4fQ.BCfRpOXANe6LJyJrkmCb_nf0o5p6K4yx1m5wjcoh3-0"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1/apimonitoringmotorlistrik/api/hapuskerusakanmotor/1/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"path": [
+								"apimonitoringmotorlistrik",
+								"api",
+								"hapuskerusakanmotor",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint Utama",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1/apimonitoringmotorlistrik/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"apimonitoringmotorlistrik",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
